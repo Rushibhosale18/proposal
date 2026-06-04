@@ -6,19 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Make the NO button run away
     const moveNoButton = () => {
-        // Switch to absolute positioning if not already
-        if (btnNo.style.position !== 'absolute') {
-            btnNo.style.position = 'absolute';
+        // Switch to fixed positioning so it's relative to the screen and doesn't get hidden
+        if (btnNo.style.position !== 'fixed') {
+            btnNo.style.position = 'fixed';
+            btnNo.style.zIndex = '9999'; // ensure it stays on top of everything
         }
 
         // Calculate maximum allowed coordinates so it stays within the screen
-        // Subtract button width/height to keep it fully visible
         const maxX = window.innerWidth - btnNo.offsetWidth - 20;
         const maxY = window.innerHeight - btnNo.offsetHeight - 20;
 
-        // Generate random positions
-        const randomX = Math.floor(Math.random() * maxX);
-        const randomY = Math.floor(Math.random() * maxY);
+        // Generate random positions, keeping a 20px safe padding from top/left edges
+        const randomX = Math.max(20, Math.floor(Math.random() * maxX));
+        const randomY = Math.max(20, Math.floor(Math.random() * maxY));
 
         // Apply new position
         btnNo.style.left = `${randomX}px`;
