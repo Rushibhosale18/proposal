@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Proposal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- The Proposal Card -->
+    <div id="proposal-container" class="glass-card">
+        <h1 class="main-title">Hey there! 😊</h1>
+        
+        <div class="shayari">
+            <p>आपल्या मैत्रीचा हा प्रवास खूप सुंदर आहे,</p>
+            <p>मला या नात्याला एक नवीन नाव द्यायचं आहे...</p>
+        </div>
+
+        <h2 class="question">Will you go on a date with me?</h2>
+        
+        <div class="buttons">
+            <button id="btn-yes" class="btn btn-yes">YES! 🥰</button>
+            <button id="btn-no" class="btn btn-no">No 💔</button>
+        </div>
+    </div>
+
+    <!-- The Success/Celebration Card (Hidden initially) -->
+    <div id="success-container" class="glass-card hidden">
+        <h1 class="success-title">YAYYY! I knew you'd say Yes! 🎉</h1>
+        <p class="subtitle">Get ready for the best date ever!</p>
+        
+        <div class="friend-gallery">
+            <img src="photo_1.jpg" alt="Beautiful Saree Look 1" class="friend-img">
+            <img src="photo_2.jpg" alt="Beautiful Saree Look 2" class="friend-img">
+        </div>
+        
+        <div class="quote-highlight" style="margin-top: 15px;">
+            <p>साडीतलं तुझं हे मराठमोळं रूप खरंच खूप सुंदर आहे,</p>
+            <p>तुझ्या या गोड हास्याने तर मैत्रीलाही प्रेमात पाडलंय...</p>
+        </div>
+
+        <div class="cat-gallery" style="margin-top: 20px;">
+            <img src="cute_cat_1.png" alt="Cute Cat 1" class="cat-img">
+            <img src="cute_cat_2.png" alt="Cute Cat 2" class="cat-img">
+        </div>
+
+        <h3 class="date-question">What should we do?</h3>
+        <div class="date-options">
+            <button class="date-btn" onclick="selectDate(this)">Coffee & Talks ☕</button>
+            <button class="date-btn" onclick="selectDate(this)">Dinner & Movie 🎬</button>
+            <button class="date-btn" onclick="selectDate(this)">Drive & Ice Cream 🍦</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
